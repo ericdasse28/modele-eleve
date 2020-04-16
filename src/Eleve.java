@@ -37,16 +37,16 @@ public class Eleve {
 	}
 
 	
-	public void ajouterNote(int note) {		
+	public void ajouterNote(int note) {	
 		if (note < 0)
 			note = 0;
 		else if (note > 20)
 			note = 20;
 		
 		listeNotes.add(note);
+		int nbNotes = listeNotes.size();
 		
-		moyenne += note / listeNotes.size();
-		
+		moyenne = (moyenne * (nbNotes - 1) + note) / nbNotes;
 	}
 	
 	public String toString() {
