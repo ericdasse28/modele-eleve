@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Eleve {
 	private String nom;
-	private ArrayList<Integer> listeNotes;
+	private ArrayList<Integer> listeNotes = new ArrayList<>();
 	private double moyenne = 0;
 	
 	
